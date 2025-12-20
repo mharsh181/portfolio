@@ -92,7 +92,7 @@ const getGitHubRepos = async () => {
     }
 
     try {
-        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=3`);
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=9`);
         if (!response.ok) throw new Error('Failed to fetch repos');
 
         const repos = await response.json();
@@ -113,6 +113,8 @@ const getGitHubRepos = async () => {
             `;
             container.innerHTML += html;
         });
+
+        refreshTilt(); // Apply tilt to new elements
 
         // Re-trigger ScrollReveal for new elements if needed, or simple CSS fade-in
     } catch (error) {
