@@ -49,7 +49,7 @@ A premium, fast, and fully responsive personal portfolio website designed to sho
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source.
 
 ---
 <p align="center">Made with ❤️ by Harsh Mishra</p>
