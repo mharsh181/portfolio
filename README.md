@@ -7,6 +7,7 @@ A premium, fast, and fully responsive personal portfolio website designed to sho
 ## ✨ key Features
 
 -   **Creative Design**: Dark-themed UI with neon accents, glassmorphism, and smooth section transitions.
+-   **Theme Personalization**: 🌗 Toggle between premium Dark Mode and polished Light Mode with persistent preference saving.
 -   **Interactive Elements**:
     -   **3D Tilt Effect**: Hover over project and skill cards to see a dynamic 3D perspective effect.
     -   **Typing Animation**: Dynamic text in the standard Hero section.

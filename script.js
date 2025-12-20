@@ -1,11 +1,34 @@
 /* Toggle Icon Navbar */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+/* Theme Toggle */
+let themeBtn = document.querySelector('#theme-btn');
+let themeIcon = document.querySelector('#theme-btn i');
+
+themeBtn.onclick = () => {
+    document.body.classList.toggle('light-mode');
+
+    // Toggle Icon
+    if (document.body.classList.contains('light-mode')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'light');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'dark');
+    }
+};
+
+// Check local storage on load
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+}
 
 /* Scroll Sections Active Link */
 let sections = document.querySelectorAll('section');
