@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description"
+        content="Portfolio of a creative web developer specializing in building premium digital experiences.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Utilities -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <a href="#home" class="logo">Portfolio<span class="active-dot">.</span></a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Harsh Mishra</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I build premium, interactive, and responsive websites that leave a lasting impression. Let's create
+                something specific together.</p>
+
+            <div class="social-media">
+                <a href="https://github.com/mharsh181" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/harshmishra95" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:mharsh181@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://instagram.com/harshmishra95" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <a href="#contact" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <!-- Placeholder for user image -->
+                    <img src="hero.jpg" alt="Harsh Mishra">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="https://placehold.co/400x400/0ef/000?text=About+Me" alt="About Me">
+            <span class="circle-spin"></span>
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Python Developer & Backend Engineer!</h3>
+            <p>Results-driven MCA Graduate transitioning into professional software development with specialization in
+                the Python ecosystem. Experienced in building backend systems, REST APIs, and machine learning driven
+                applications with a strong focus on clean, scalable, and maintainable code.</p>
+
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Languages & Frameworks</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Python (Django, FastAPI, Flask) <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>JavaScript, HTML5, CSS3 <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>REST APIs & Celery <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Bootstrap & Frontend <span>75%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Data Science & Tools</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Data Science (Pandas, Scikit-Learn) <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Databases (MySQL, MongoDB) <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Docker & Git <span>75%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Postman & API Testing <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <!-- Dynamic GitHub Repos Container -->
+        <div class="portfolio-container" id="github-repos">
+            <!-- Repos will be injected here by JS -->
+            <p style="text-align:center; width:100%; font-size:1.6rem;">Loading GitHub Repos...</p>
+        </div>
+    </section>
+
+    <section class="blogs" id="blogs">
+        <h2 class="heading">Latest <span>Blogs</span></h2>
+
+        <div class="portfolio-container" id="blog-posts">
+            <!-- Blog posts will be injected here by JS -->
+            <p style="text-align:center; width:100%; font-size:1.6rem;">Loading Blog Posts...</p>
+        </div>
+        <!-- Education Section -->
+        <section class="education" id="education">
+            <h2 class="heading">My <span>Journey</span></h2>
+
+            <div class="education-container">
+                <!-- Master's Degree -->
+                <div class="education-box">
+                    <div class="edu-img">
+                        <img src="https://www.ggu.ac.in/media/BasePageImage/GGV-logo.png" alt="GGV Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3>Guru Ghasidas Vishwavidyalaya</h3>
+                        <p class="course">Master of Computer Application</p>
+                        <p class="grade">2024 - 2026</p>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="education-box">
+                    <div class="edu-img">
+                        <img src="https://www.ggu.ac.in/media/BasePageImage/GGV-logo.png" alt="GGV Logo">
+                    </div>
+                    <div class="edu-content">
+                        <h3>Guru Ghasidas Vishwavidyalaya</h3>
+                        <p class="course">Bachelor of Computer Science (Hons)</p>
+                        <p class="grade">CGPA: 7.78 | 2021 - 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section (Replaces Contact Form) -->
+        <section class="contact" id="contact">
+            <h2 class="heading">Connect <span>With Me</span></h2>
+
+            <div class="social-connect-container">
+                <a href="https://linkedin.com/in/harshmishra95" target="_blank" class="social-card linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Let's Connect</p>
+                </a>
+
+                <a href="https://github.com/mharsh181" target="_blank" class="social-card github">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Check my Code</p>
+                </a>
+
+                <a href="https://instagram.com/harshmishra95" target="_blank" class="social-card instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Follow Me</p>
+                </a>
+
+                <a href="mailto:mharsh181@gmail.com" class="social-card email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>Say Hello</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by Harsh Mishra | All Rights Reserved.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+        </footer>
+
+        <!-- Typer JS for typing effect -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <!-- Scroll Reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- Main Script -->
+        <script src="script.js"></script>
+</body>
+
+</html>
