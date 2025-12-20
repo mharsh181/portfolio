@@ -730,16 +730,25 @@ section {
 }
 
 /* Education Section */
-.education-container {
+/* Education & Certificates Section */
+.journey-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 5rem;
 }
 
-.education-box {
+.journey-column {
     flex: 1 1 40rem;
+}
+
+.journey-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+/* Reusing education-box but removing flex property from container since we use columns now */
+.education-box {
+    /* flex: 1 1 40rem;  Removed as it's inside a column now */
     background: var(--second-bg-color);
     padding: 3rem 2rem;
     border-radius: 2rem;
@@ -748,6 +757,8 @@ section {
     gap: 2rem;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    margin-bottom: 2rem;
+    /* Add spacing between vertically stacked items */
     transform-style: preserve-3d;
     transform: perspective(1000px);
 }
