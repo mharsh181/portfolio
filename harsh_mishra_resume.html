@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Mishra — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f0e8;
+    --accent: #c8421a;
+    --muted: #7a7060;
+    --rule: #d4c9b5;
+    --highlight: #e8dfc8;
+    --page-bg: #faf6ee;
+    --toggle-bg: rgba(200,66,26,0.1);
+  }
+
+  /* ── DARK MODE OVERRIDES ── */
+  body.dark-mode {
+    --ink: #e8e0d0;
+    --paper: #0c1016;
+    --accent: #00f2ea;
+    --muted: #8a9bb0;
+    --rule: #1e2733;
+    --highlight: #131821;
+    --page-bg: #131821;
+    --toggle-bg: rgba(0,242,234,0.1);
+  }
+
+  body.dark-mode .page {
+    background: var(--page-bg);
+    box-shadow: 0 2px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,242,234,0.06);
+  }
+
+  body.dark-mode .page::before {
+    background: linear-gradient(180deg, var(--accent) 0%, #00a89e 100%);
+  }
+
+  body.dark-mode .header {
+    border-bottom-color: var(--rule);
+  }
+
+  body.dark-mode .tag {
+    background: var(--highlight);
+    border-color: var(--rule);
+    color: var(--ink);
+  }
+
+  body.dark-mode .tag:hover {
+    background: #1e2d3d;
+    border-color: var(--accent);
+  }
+
+  body.dark-mode .stack-tag {
+    color: var(--accent);
+    background: rgba(0,242,234,0.07);
+    border-color: rgba(0,242,234,0.2);
+  }
+
+  body.dark-mode .achievement-badge {
+    background: linear-gradient(135deg, rgba(0,242,234,0.1), rgba(0,242,234,0.04));
+    border-color: rgba(0,242,234,0.25);
+    color: var(--accent);
+  }
+
+  body.dark-mode .footer-strip {
+    border-top-color: var(--rule);
+  }
+
+  /* Fix hardcoded dark colors invisible on dark bg */
+  body.dark-mode {
+    background: var(--paper);
+  }
+
+  body.dark-mode .project-desc {
+    color: #c8c0b0;
+  }
+
+  body.dark-mode .about-text {
+    color: #b8b0a0;
+  }
+
+  body.dark-mode .tagline {
+    color: #9aabb8;
+  }
+
+  body.dark-mode .contact-block a,
+  body.dark-mode .contact-block span {
+    color: #9aabb8;
+  }
+
+  body.dark-mode .contact-block a:hover {
+    color: var(--accent);
+  }
+
+  body.dark-mode .edu-degree,
+  body.dark-mode .cert-name {
+    color: #ddd8cc;
+  }
+
+  body.dark-mode .edu-school,
+  body.dark-mode .cert-issuer,
+  body.dark-mode .edu-meta span {
+    color: #8a9bb0;
+  }
+
+  body.dark-mode .skill-group-title {
+    color: #8a9bb0;
+  }
+
+  body.dark-mode h1 {
+    color: #f0e8d8;
+  }
+
+  body.dark-mode .footer-strip .lang,
+  body.dark-mode .footer-strip .interests {
+    color: #7a8a9a;
+  }
+
+  body.dark-mode .main {
+    border-left-color: var(--rule);
+  }
+
+  body.dark-mode .c-label {
+    color: #3a4a5a;
+  }
+
+  /* ── THEME TOGGLE BUTTON ── */
+  .resume-theme-btn {
+    position: fixed;
+    top: 1.6rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--toggle-bg);
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+
+  .resume-theme-btn:hover {
+    box-shadow: 0 0 14px var(--accent);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 40px auto;
+    padding: 60px 64px;
+    background: #faf6ee;
+    box-shadow: 0 2px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04);
+    position: relative;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Left accent bar */
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent) 0%, #8b2c0f 100%);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 32px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .header-left { }
+
+  .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 420px;
+    line-height: 1.5;
+  }
+
+  .contact-block {
+    text-align: right;
+    padding-top: 6px;
+  }
+
+  .contact-block a,
+  .contact-block span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 3px;
+    transition: color 0.2s;
+  }
+
+  .contact-block a:hover { color: var(--accent); }
+
+  .contact-block .c-label {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rule);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  /* ── LAYOUT ── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0 40px;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar { padding-top: 2px; }
+
+  .sidebar-section { margin-bottom: 32px; }
+
+  .sidebar-section .sec-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .skill-group { margin-bottom: 14px; }
+
+  .skill-group-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 5px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tag {
+    font-size: 10px;
+    background: var(--highlight);
+    color: var(--ink);
+    padding: 2px 7px;
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+    border: 1px solid var(--rule);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .tag:hover {
+    background: #e0d4b8;
+    border-color: var(--muted);
+  }
+
+  .edu-item { margin-bottom: 16px; }
+
+  .edu-degree {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .edu-school {
+    font-size: 10.5px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .edu-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .edu-cgpa {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .cert-item {
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid var(--highlight);
+  }
+
+  .cert-item:last-child { border-bottom: none; }
+
+  .cert-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .cert-issuer {
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    margin-top: 1px;
+  }
+
+  /* ── MAIN ── */
+  .main { border-left: 1px solid var(--rule); padding-left: 36px; }
+
+  .main-section { margin-bottom: 32px; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+  }
+
+  .section-header .line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* About */
+  .about-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+    border-left: 2px solid var(--accent);
+    padding-left: 14px;
+  }
+
+  /* Projects */
+  .project {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--rule);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .project:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    gap: 12px;
+  }
+
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .project-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .stack-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--accent);
+    background: rgba(200, 66, 26, 0.07);
+    padding: 1px 6px;
+    border-radius: 2px;
+    border: 1px solid rgba(200, 66, 26, 0.2);
+  }
+
+  .project-desc {
+    font-size: 12px;
+    color: #4a4540;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .project-desc li {
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 3px;
+    list-style: none;
+  }
+
+  .project-desc li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  /* Footer strip */
+  .footer-strip {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-strip .lang {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .footer-strip .interests {
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #c8421a15, #c8421a08);
+    border: 1px solid rgba(200,66,26,0.25);
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    margin-top: 10px;
+  }
+
+  .achievement-badge::before {
+    content: '★';
+    font-size: 12px;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; }
+    body::before { display: none; }
+  }
+</style>
+</head>
+<body>
+<!-- Theme Toggle Button -->
+<button class="resume-theme-btn" id="resume-theme-btn" title="Toggle theme">🌙</button>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="label">Curriculum Vitae</div>
+      <h1>Harsh<br>Mishra</h1>
+      <p class="tagline">MCA Candidate · Python & ML Engineer · Building intelligent, scalable systems with deep learning and computer vision.</p>
+    </div>
+    <div class="contact-block">
+      <div class="c-label">Contact</div>
+      <a href="mailto:mharsh181@gmail.com">mharsh181@gmail.com</a>
+      <span>+91-6266384539</span>
+      <a href="https://linkedin.com/in/harshmishra95">linkedin/harshmishra95</a>
+      <a href="https://github.com/mharsh181">github/mharsh181</a>
+      <a href="https://mharsh181.github.io/portfolio">portfolio →</a>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="body-grid">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sec-label">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java (Basic)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Backend & APIs</div>
+          <div class="skill-tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Django</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">ML & AI</div>
+          <div class="skill-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Data & DBs</div>
+          <div class="skill-tags">
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Tools & Platforms</div>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Professional</div>
+          <div class="skill-tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Debugging</span>
+            <span class="tag">Documentation</span>
+            <span class="tag">Team Collaboration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sec-label">Education</div>
+
+        <div class="edu-item">
+          <div class="edu-degree">Master of Computer Application</div>
+          <div class="edu-school">Guru Ghasidas Vishwavidyalaya</div>
+          <div class="edu-meta">
+            <span>2024 – 2026</span>
+            <span class="edu-cgpa">7.72</span>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-degree">B.Sc. Computer Science (Hons)</div>
+          <div class="edu-school">Guru Ghasidas Vishwavidyalaya</div>
+          <div class="edu-meta">
+            <span>2021 – 2024</span>
+            <span class="edu-cgpa">7.78</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sec-label">Certificates</div>
+
+        <div class="cert-item">
+          <div class="cert-name">ML for Data Science Projects</div>
+          <div class="cert-issuer">IBM Skills Build · Feb 2025</div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-name">Data Transformation with Google Cloud</div>
+          <div class="cert-issuer">Google Cloud Training · Oct 2024</div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-name">Python & Ethical Hacking</div>
+          <div class="cert-issuer">Udemy · July 2025</div>
+        </div>
+
+        <div class="achievement-badge">IBM Badge · Oct 2024</div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section class="main-section">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2>About</h2>
+          <div class="line"></div>
+        </div>
+        <p class="about-text">Results-driven MCA candidate specializing in Python-based software development and machine learning applications. Hands-on experience building RESTful APIs, backend systems, and data-driven ML solutions, with strong knowledge of computer vision, deep learning, and model deployment. Passionate about writing clean, scalable, and maintainable code following SDLC best practices.</p>
+      </section>
+
+      <section class="main-section">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2>Projects</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">Image Captioning System<br>with Object Detection</div>
+            <div class="project-date">Aug 2025 – Dec 2025</div>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Deep Learning</span>
+            <span class="stack-tag">YOLOv8</span>
+            <span class="stack-tag">VGG16</span>
+            <span class="stack-tag">CNN–LSTM</span>
+            <span class="stack-tag">Flickr8k</span>
+          </div>
+          <ul class="project-desc">
+            <li>Designed an encoder–decoder image captioning system integrating YOLOv8 object detection for enhanced contextual accuracy via object-tag injection (~40% improvement).</li>
+            <li>Used VGG16 for feature extraction and Beam Search decoding for coherent, high-quality caption generation.</li>
+            <li>Built modular pipelines for training, inference, and dataset preprocessing over 8,000+ Flickr8k images.</li>
+            <li>Designed a GUI with CustomTkinter for image upload and caption visualization.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">Weather Prediction Project</div>
+            <div class="project-date">June – July 2025</div>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">scikit-learn</span>
+            <span class="stack-tag">Streamlit</span>
+            <span class="stack-tag">Regression</span>
+            <span class="stack-tag">EDA</span>
+          </div>
+          <ul class="project-desc">
+            <li>Built a regression-based ML model using 100,000+ historical weather records to predict temperature, humidity, and rainfall.</li>
+            <li>Performed thorough EDA and feature engineering to enhance model performance; evaluated with RMSE and R² metrics.</li>
+            <li>Deployed an interactive prediction interface using Streamlit.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">Real-Time Object Detection with YOLO</div>
+            <div class="project-date">Sep 2024 – Jan 2025</div>
+          </div>
+          <div class="project-stack">
+            <span class="stack-tag">YOLOv5</span>
+            <span class="stack-tag">PyTorch</span>
+            <span class="stack-tag">OpenCV</span>
+            <span class="stack-tag">Computer Vision</span>
+          </div>
+          <ul class="project-desc">
+            <li>Developed a real-time object detection system using YOLOv5 and PyTorch to detect and classify objects from live webcam input.</li>
+            <li>Integrated OpenCV for bounding box visualization and confidence scoring, achieving low-latency real-time inference.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-strip">
+    <div class="lang">Languages: English · Hindi</div>
+    <div class="interests">Interests: Strategic Gaming · Movies · Traveling</div>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    const btn = document.getElementById('resume-theme-btn');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        btn.textContent = '☀️';
+        btn.title = 'Switch to Light Mode';
+      } else {
+        document.body.classList.remove('dark-mode');
+        btn.textContent = '🌙';
+        btn.title = 'Switch to Dark Mode';
+      }
+    }
+
+    // Read from localStorage (synced with portfolio)
+    const saved = localStorage.getItem('theme');
+    // Portfolio stores 'light' for light mode; anything else = dark
+    applyTheme(saved === 'light' ? 'light' : 'dark');
+
+    // Toggle on button click and write back to localStorage
+    btn.addEventListener('click', function () {
+      const isDark = document.body.classList.contains('dark-mode');
+      const newTheme = isDark ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    });
+
+    // Live sync: if the portfolio tab changes the theme, reflect here immediately
+    window.addEventListener('storage', function (e) {
+      if (e.key === 'theme') {
+        applyTheme(e.newValue === 'light' ? 'light' : 'dark');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

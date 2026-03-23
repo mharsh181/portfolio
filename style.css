@@ -269,6 +269,34 @@ span {
     box-shadow: none;
 }
 
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    cursor: none;
+}
+
+.btn-outline:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
 /* Home Image with Glow */
 .home-img {
     flex: 1;
