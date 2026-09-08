@@ -4,299 +4,936 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Creative Developer</title>
+    <title>Harsh Mishra | AI/ML Engineer & GenAI Architect</title>
     <meta name="description"
-        content="Portfolio of a creative web developer specializing in building premium digital experiences.">
+        content="Portfolio of Harsh Mishra — AI/ML Engineer specializing in LLMs, RAG architectures, Autonomous Agents, and Computer Vision. Ex-Tech Intern at CGPDTM.">
+    <meta name="keywords"
+        content="Harsh Mishra, AI Engineer, Machine Learning, GenAI, RAG, FastAPI, Python, Deep Learning, Computer Vision, CGPDTM, Portfolio">
+    <meta name="author" content="Harsh Mishra">
 
-    <!-- Fonts -->
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content="Harsh Mishra | AI/ML Engineer & GenAI Architect">
+    <meta property="og:description"
+        content="Results-driven AI/ML Engineer with hands-on experience designing NLP chatbots, RAG architectures, and computer vision models.">
+    <meta property="og:image" content="hero.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Space Grotesk, Outfit & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Utilities -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Custom CSS -->
+    <!-- Custom AI Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Background Canvas Mesh Glow -->
+    <div class="neural-bg-glow"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <header class="header">
-        <a href="#home" class="logo">Portfolio<span class="active-dot">.</span></a>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span class="logo-text">harsh<span class="accent-dot">.ai</span></span>
+        </a>
+
+        <div class="status-badge-nav">
+            <span class="pulse-indicator"></span>
+            <span class="status-text">Open to AI/ML Roles</span>
+        </div>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#playground" class="nav-link">AI Playground</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
-        <div class="bx" id="theme-btn"><i class="fa-solid fa-moon"></i></div>
-        <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="Harsh_Mishra_resume-8sept.pdf" download class="btn-nav-resume">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>CV</span>
+            </a>
+            <div class="menu-toggle" id="menu-icon" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Harsh Mishra</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I build premium, interactive, and responsive websites that leave a lasting impression. Let's create
-                something specific together.</p>
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Next-Gen Intelligent Systems</span>
+                </div>
 
-            <div class="social-media">
-                <a href="https://github.com/mharsh181" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/harshmishra95" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
-                <a href="mailto:mharsh181@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://instagram.com/harshmishra95" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Harsh Mishra</span>
+                </h1>
+
+                <div class="typing-wrapper">
+                    <span class="typing-prefix">Specialized in&nbsp;</span>
+                    <span class="multiple-text"></span>
+                </div>
+
+                <p class="hero-desc">
+                    Results-driven <strong>AI/ML Engineer</strong> with hands-on expertise architecting
+                    <strong>autonomous LLM agents</strong>, <strong>enterprise RAG pipelines</strong>, and
+                    <strong>computer vision systems</strong>. Ex-Tech Intern at <strong>CGPDTM</strong> (Ministry of Commerce & Industry)
+                    developing production conversational AI and Text-to-SQL engines.
+                </p>
+
+                <!-- Key Metrics Strip -->
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-val">CGPDTM</span>
+                        <span class="metric-lbl">Tech Intern (AI/ML)</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-val">8.00</span>
+                        <span class="metric-lbl">MCA CGPA (GGV)</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-val">100k+</span>
+                        <span class="metric-lbl">Data Records Modeled</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-val">3+</span>
+                        <span class="metric-lbl">Flagship AI Systems</span>
+                    </div>
+                </div>
+
+                <!-- Action CTA Buttons -->
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Explore AI Projects</span>
+                    </a>
+                    <a href="Harsh_Mishra_resume-8sept.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Download Resume</span>
+                    </a>
+                    <a href="harsh_mishra_resume.html" target="_blank" class="btn btn-outline">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>Interactive CV</span>
+                    </a>
+                </div>
+
+                <!-- Social Quick Chips -->
+                <div class="hero-socials">
+                    <span class="socials-label">Connect:</span>
+                    <a href="https://github.com/mharsh181" target="_blank" class="social-chip" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                        <span>github/mharsh181</span>
+                    </a>
+                    <a href="https://linkedin.com/in/harshmishra95" target="_blank" class="social-chip" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>linkedin/harshmishra95</span>
+                    </a>
+                    <a href="mailto:mharsh181@gmail.com" class="social-chip" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>mharsh181@gmail.com</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="btn-group">
-                <a href="https://drive.google.com/file/d/1JTRRgGhaSR_w0Y6g7i6VdXgeGd3DIH6j/view?usp=sharing"
-                    class="btn">Download CV</a>
-                <a href="harsh_mishra_resume.html" target="_blank" class="btn btn-outline">View Resume</a>
-            </div>
-        </div>
+            <!-- Hero Image with AI Holographic Frame -->
+            <div class="hero-visual">
+                <div class="ai-avatar-wrapper">
+                    <div class="neural-orbit-ring ring-1"></div>
+                    <div class="neural-orbit-ring ring-2"></div>
+                    
+                    <!-- Floating Tech Badges -->
+                    <div class="floating-tech-badge badge-top-right">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>RAG & FAISS</span>
+                    </div>
+                    <div class="floating-tech-badge badge-bottom-left">
+                        <i class="fa-brands fa-python"></i>
+                        <span>FastAPI & Python</span>
+                    </div>
+                    <div class="floating-tech-badge badge-bottom-right">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>YOLOv8 & CV</span>
+                    </div>
+                    <div class="floating-tech-badge badge-top-left">
+                        <i class="fa-solid fa-database"></i>
+                        <span>Text-to-SQL</span>
+                    </div>
 
-        <div class="home-img">
-            <div class="glowing-circle">
-                <span></span>
-                <span></span>
-                <div class="image">
-                    <!-- Placeholder for user image -->
-                    <img src="hero.jpg" alt="Harsh Mishra">
+                    <div class="avatar-card">
+                        <img src="hero.jpg" alt="Harsh Mishra - AI/ML Engineer" class="avatar-img">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-glass-plate">
+                            <span class="plate-title">Harsh Mishra</span>
+                            <span class="plate-subtitle"><i class="fa-solid fa-bolt"></i> AI / ML Engineer</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="https://placehold.co/400x400/0ef/000?text=About+Me" alt="About Me">
-            <span class="circle-spin"></span>
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Overview</span>
+            <h2 class="section-title">Architecting <span>Intelligent Systems</span></h2>
+            <p class="section-subtitle">Bridging theoretical machine learning with production-grade backend engineering.</p>
         </div>
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Python Developer & Backend Engineer!</h3>
-            <p>Results-driven MCA Graduate transitioning into professional software development with specialization in
-                the Python ecosystem. Experienced in building backend systems, REST APIs, and machine learning driven
-                applications with a strong focus on clean, scalable, and maintainable code.</p>
-
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Languages & Backend</h3>
-
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Python <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>FastAPI / Flask / Django <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Machine Learning & Deep Learning <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>NLP & Computer Vision <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
+        <div class="about-grid">
+            <div class="about-card main-about">
+                <div class="card-icon"><i class="fa-solid fa-dna"></i></div>
+                <h3>Engineering Philosophy</h3>
+                <p>
+                    I build AI systems designed for the real world — focusing not just on model benchmarks, but on latency, 
+                    hallucination mitigation, secure context retrieval, and robust API integration.
+                </p>
+                <p>
+                    With deep hands-on experience in <strong>Large Language Models (LLMs)</strong>, 
+                    <strong>Retrieval-Augmented Generation (RAG)</strong>, <strong>Vector Databases (FAISS)</strong>, 
+                    and <strong>Computer Vision (YOLOv8 & CNNs)</strong>, I engineer end-to-end architectures that transform complex multi-modal data 
+                    into actionable business intelligence.
+                </p>
+                <div class="about-quick-specs">
+                    <div class="spec-pill"><i class="fa-solid fa-circle-check"></i> Schema-Aware Text-to-SQL</div>
+                    <div class="spec-pill"><i class="fa-solid fa-circle-check"></i> Enterprise Document OCR & RAG</div>
+                    <div class="spec-pill"><i class="fa-solid fa-circle-check"></i> Computer Vision & Object Detection</div>
+                    <div class="spec-pill"><i class="fa-solid fa-circle-check"></i> High-Throughput FastAPI Backends</div>
                 </div>
             </div>
 
-            <div class="skills-column">
-                <h3 class="title">Data Science & Tools</h3>
+            <div class="about-card info-card">
+                <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                <h3>Quick Profile</h3>
+                <ul class="profile-list">
+                    <li><span class="p-key">Location:</span> <span class="p-val">Bilaspur / Delhi, India</span></li>
+                    <li><span class="p-key">Degree:</span> <span class="p-val">MCA (CGPA: 8.00 / 10)</span></li>
+                    <li><span class="p-key">Undergrad:</span> <span class="p-val">B.Sc Computer Science Hons (7.78)</span></li>
+                    <li><span class="p-key">Primary Stack:</span> <span class="p-val">Python, FastAPI, PyTorch, scikit-learn</span></li>
+                    <li><span class="p-key">AI Focus:</span> <span class="p-val">GenAI, RAG, NLP, Computer Vision</span></li>
+                    <li><span class="p-key">Availability:</span> <span class="p-val status-open">Available Immediately</span></li>
+                </ul>
+            </div>
 
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>scikit-learn / OpenCV / NumPy / Pandas <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>MySQL <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Git / GitHub / Docker <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        <div class="progress">
-                            <h3>Jupyter Notebook / Streamlit <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
+            <div class="about-card highlight-card">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Core Differentiator</h3>
+                <p>
+                    Unlike pure data scientists or frontend-only developers, I operate across the full stack of modern AI: 
+                    from <em>fine-grained prompt engineering</em> and <em>vector search</em> to <em>database schema parsing</em> 
+                    and <em>asynchronous API microservices</em>.
+                </p>
+                <div class="about-action">
+                    <a href="#playground" class="inline-link">
+                        Try the Interactive AI Terminal <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="portfolio" id="projects">
-        <h2 class="heading">Latest <span>Projects</span></h2>
+    <!-- Experience Section (CGPDTM Spotlight) -->
+    <section class="experience section" id="experience">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Work History</span>
+            <h2 class="section-title">Professional <span>Experience</span></h2>
+            <p class="section-subtitle">Real-world AI deployment and government-scale enterprise pipelines.</p>
+        </div>
 
-        <!-- Dynamic GitHub Repos Container -->
-        <div class="portfolio-container" id="github-repos">
-            <!-- Repos will be injected here by JS -->
-            <p style="text-align:center; width:100%; font-size:1.6rem;">Loading GitHub Repos...</p>
+        <div class="experience-showcase">
+            <div class="exp-main-card">
+                <div class="exp-header">
+                    <div class="exp-role-info">
+                        <div class="exp-badge">Government of India · Ministry of Commerce & Industry</div>
+                        <h3 class="exp-role">Tech Intern — AI/ML Development & Backend</h3>
+                        <h4 class="exp-company">CGPDTM (Controller General of Patents, Designs and Trade Marks), Delhi</h4>
+                    </div>
+                    <div class="exp-period">
+                        <span class="date-tag"><i class="fa-regular fa-calendar"></i> Apr 2026 – Sep 2026</span>
+                        <span class="loc-tag"><i class="fa-solid fa-location-dot"></i> Delhi, India</span>
+                    </div>
+                </div>
+
+                <p class="exp-summary">
+                    Spearheaded Generative AI solutions and autonomous database query systems for national intellectual property operations, 
+                    architecting conversational assistants, RAG pipelines, and automated high-throughput data extraction services.
+                </p>
+
+                <!-- Detailed Experience Deliverables Grid -->
+                <div class="exp-deliverables-grid">
+                    <div class="deliverable-card">
+                        <div class="d-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div class="d-content">
+                            <h4>Generative AI & IP Saarthi 2.0</h4>
+                            <p>Architected <strong>IP Saarthi 2.0</strong>, an NLP-powered conversational chatbot built using Python, LLMs, and advanced prompt engineering to automate and streamline complex intellectual property inquiries for citizens.</p>
+                            <span class="d-tag">Python · LLMs · Prompt Engineering · NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="d-icon"><i class="fa-solid fa-database"></i></div>
+                        <div class="d-content">
+                            <h4>Autonomous RAG-Powered Text-to-SQL Agent</h4>
+                            <p>Engineered an autonomous Text-to-SQL AI Agent on SQL Server Database, automating dynamic schema retrieval, SQL query generation, automated guardrails, tabular reporting, and chart-based data visualizations.</p>
+                            <span class="d-tag">SQL Server · RAG · Autonomous Agents · Data Viz</span>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="d-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div class="d-content">
+                            <h4>Legal Document Intelligence & OCR Pipeline</h4>
+                            <p>Engineered an end-to-end RAG pipeline scraping IP legal documents, integrating OCR, and fine-tuning document chunking and parsing strategies to enhance context retrieval accuracy.</p>
+                            <span class="d-tag">OCR · Document Chunking · Vector Search · RAG</span>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="d-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <div class="d-content">
+                            <h4>Workflow & Performance Optimization</h4>
+                            <p>Optimized LLM prompt workflows, query validation, and error handling mechanisms to minimize token overhead, eliminate hallucinations, and improve generation accuracy and response latency.</p>
+                            <span class="d-tag">Latency Optimization · Hallucination Defense · Evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card full-span">
+                        <div class="d-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="d-content">
+                            <h4>High-Volume Database Pipeline Automation</h4>
+                            <p>Engineered automated Python and SQL scripts for high-volume Trademark BLOB file extraction, binary decoding, and enterprise data preprocessing pipelines.</p>
+                            <span class="d-tag">BLOB Processing · Python ETL · SQL Server · Batch Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="blogs" id="blogs">
-        <h2 class="heading">Latest <span>Blogs</span></h2>
-
-        <div class="portfolio-container" id="blog-posts">
-            <!-- Blog posts will be injected here by JS -->
-            <p style="text-align:center; width:100%; font-size:1.6rem;">Loading Blog Posts...</p>
+    <!-- Flagship Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Engineering Showcase</span>
+            <h2 class="section-title">Flagship <span>AI/ML Projects</span></h2>
+            <p class="section-subtitle">Scalable intelligent software built with modern neural networks and distributed agents.</p>
         </div>
-        <!-- Education Section -->
-        <section class="education" id="education">
-            <h2 class="heading">My <span>Journey</span></h2>
 
-            <div class="journey-row">
-                <!-- Education Column -->
-                <div class="journey-column">
-                    <h3 class="title">Education</h3>
-                    <div class="education-box">
-                        <div class="edu-img">
-                            <img src="ggv_logo.png" alt="GGV Logo">
-                        </div>
-                        <div class="edu-content">
-                            <h3>Guru Ghasidas Vishwavidyalaya</h3>
-                            <p class="course">Master of Computer Application</p>
-                            <p class="grade">2024 - 2026</p>
-                        </div>
+        <!-- Filter Tabs -->
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All Systems</button>
+            <button class="filter-btn" data-filter="genai">Generative AI & RAG</button>
+            <button class="filter-btn" data-filter="cv">Computer Vision & DL</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning & Data</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1: Multi-Agent SQL AI System -->
+            <div class="project-card" data-category="genai">
+                <div class="project-banner">
+                    <div class="project-banner-header">
+                        <span class="project-cat-badge"><i class="fa-solid fa-sparkles"></i> Flagship GenAI</span>
+                        <span class="project-date">Jan 2026 – Mar 2026</span>
+                    </div>
+                    <h3 class="project-title">Multi-Agent SQL AI System</h3>
+                    <p class="project-headline">Multilingual, Schema-Aware Natural Language to SQL Generation Platform</p>
+                </div>
+
+                <div class="project-body">
+                    <p class="project-desc">
+                        Developed a multilingual, RAG-powered Natural Language to SQL system using <strong>FastAPI</strong> 
+                        and <strong>Ollama (Local LLMs)</strong> for secure, schema-aware query generation, validation, and automated execution.
+                    </p>
+
+                    <div class="arch-flow">
+                        <span class="arch-step">NL Prompt</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">FAISS Schema RAG</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Ollama LLM</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">SQL Guardrail</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Visual Output</span>
                     </div>
 
-                    <div class="education-box">
-                        <div class="edu-img">
-                            <img src="ggv_logo.png" alt="GGV Logo">
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Multilingual RAG:</strong> Handles diverse language input with vector embeddings in FAISS.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Safe Execution:</strong> Automated schema retrieval and strict query sanitization preventing destructive operations.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Local Privacy:</strong> Runs entirely on Ollama local models with zero data leakage.</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">RAG</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/mharsh181" target="_blank" class="proj-link-btn primary">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="#playground" class="proj-link-btn secondary">
+                            <i class="fa-solid fa-terminal"></i> Ask Terminal
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Image Captioning System with Object Detection -->
+            <div class="project-card" data-category="cv">
+                <div class="project-banner cv-banner">
+                    <div class="project-banner-header">
+                        <span class="project-cat-badge"><i class="fa-solid fa-eye"></i> Deep Learning & Vision</span>
+                        <span class="project-date">Aug 2025 – Dec 2025</span>
+                    </div>
+                    <h3 class="project-title">Image Captioning with Object Detection</h3>
+                    <p class="project-headline">Encoder-Decoder Vision Model integrating YOLOv8 and VGG16</p>
+                </div>
+
+                <div class="project-body">
+                    <p class="project-desc">
+                        Designed a dual-encoder image captioning architecture integrating <strong>YOLOv8</strong> object tags into a 
+                        <strong>CNN–LSTM</strong> sequence decoder, yielding a <strong>~40% improvement</strong> in semantic context precision over baseline models.
+                    </p>
+
+                    <div class="arch-flow">
+                        <span class="arch-step">Image Input</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">VGG16 + YOLOv8</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">LSTM Decoder</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Beam Search</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Rich Caption</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Context Injection:</strong> YOLOv8 object tags injected into the caption decoder for rich vocabulary.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Beam Search Decoding:</strong> Coherent n-best hypothesis generation over Flickr8k dataset.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>CustomTkinter GUI:</strong> Intuitive desktop interface for real-time inference and caption overlay.</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">YOLOv8</span>
+                        <span class="tech-tag">VGG16</span>
+                        <span class="tech-tag">CNN-LSTM</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/mharsh181" target="_blank" class="proj-link-btn primary">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="https://github.com/mharsh181" target="_blank" class="proj-link-btn secondary">
+                            <i class="fa-solid fa-code"></i> Model Pipeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Weather Prediction Project -->
+            <div class="project-card" data-category="ml">
+                <div class="project-banner ml-banner">
+                    <div class="project-banner-header">
+                        <span class="project-cat-badge"><i class="fa-solid fa-chart-line"></i> Machine Learning & Analytics</span>
+                        <span class="project-date">Jun 2025 – Jul 2025</span>
+                    </div>
+                    <h3 class="project-title">Weather Prediction ML Engine</h3>
+                    <p class="project-headline">Streamlit-Powered Climate Metric Regression on 100,000+ Records</p>
+                </div>
+
+                <div class="project-body">
+                    <p class="project-desc">
+                        Engineered and deployed an interactive machine learning regression pipeline trained on <strong>100,000+ historical climate records</strong> 
+                        to predict multiple meteorological parameters with robust hyperparameter tuning.
+                    </p>
+
+                    <div class="arch-flow">
+                        <span class="arch-step">100k+ Records</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Feature Engineering</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">scikit-learn Regressors</span>
+                        <i class="fa-solid fa-arrow-right arch-arr"></i>
+                        <span class="arch-step">Streamlit UI</span>
+                    </div>
+
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>Big Data Preprocessing:</strong> Handled missing values, outliers, and cyclical time features across 100k records.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Model Benchmarking:</strong> Evaluated Multiple Regression, Random Forest, and Gradient Boosting.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Streamlit Deployment:</strong> Interactive sliders, parameter adjustments, and live data charts.</li>
+                    </ul>
+
+                    <div class="project-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/mharsh181" target="_blank" class="proj-link-btn primary">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic GitHub Repositories Container -->
+        <div class="github-repos-section">
+            <div class="sub-section-header">
+                <h3><i class="fa-brands fa-github"></i> Live GitHub Activity</h3>
+                <p>Real-time repository updates fetched via GitHub API for <code>mharsh181</code></p>
+            </div>
+            <div class="github-repos-grid" id="github-repos">
+                <!-- Repos injected via JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i>
+                    <p>Fetching repositories from GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Playground / Agent Simulator -->
+    <section class="playground section" id="playground">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-microchip"></i> Interactive Demo</span>
+            <h2 class="section-title">Test My <span>AI Agent Simulator</span></h2>
+            <p class="section-subtitle">Interact with a simulated agent terminal demonstrating Harsh's domain knowledge in GenAI and RAG.</p>
+        </div>
+
+        <div class="terminal-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="ctrl close"></span>
+                        <span class="ctrl minimize"></span>
+                        <span class="ctrl maximize"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fa-solid fa-terminal"></i> harsh_agent_v2.0 :: rag-session [ollama/fastapi]
+                    </div>
+                    <div class="terminal-status">
+                        <span class="live-dot"></span> LIVE
+                    </div>
+                </div>
+
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-msg agent-msg">
+                        <div class="msg-header">
+                            <span class="sender-tag">🤖 Harsh AI Agent</span>
+                            <span class="msg-time">Ready</span>
                         </div>
-                        <div class="edu-content">
-                            <h3>Guru Ghasidas Vishwavidyalaya</h3>
-                            <p class="course">Bachelor of Computer Science (Hons)</p>
-                            <p class="grade">CGPA: 7.78 | 2021 - 2024</p>
+                        <div class="msg-content">
+                            Hello! I am Harsh's portfolio AI agent simulator. You can ask me about his 
+                            <strong>CGPDTM internship</strong>, his <strong>Multi-Agent Text-to-SQL system</strong>, 
+                            his <strong>Image Captioning pipeline</strong>, or his <strong>technical skill stack</strong>.
+                            <br><br>
+                            Click one of the suggested prompts below or type your own question!
                         </div>
                     </div>
                 </div>
 
-                <!-- Certificates Column -->
-                <div class="journey-column">
-                    <h3 class="title">Certificates</h3>
+                <!-- Suggested Prompt Chips -->
+                <div class="terminal-suggestions">
+                    <button class="prompt-chip" data-prompt="What did Harsh build during his CGPDTM internship?">
+                        🏛️ CGPDTM Experience
+                    </button>
+                    <button class="prompt-chip" data-prompt="Explain the Multi-Agent Text-to-SQL architecture.">
+                        ⚡ Text-to-SQL Architecture
+                    </button>
+                    <button class="prompt-chip" data-prompt="How does the YOLOv8 + VGG16 Image Captioning system work?">
+                        👁️ YOLOv8 + VGG16 Pipeline
+                    </button>
+                    <button class="prompt-chip" data-prompt="What is Harsh's core technical stack and education?">
+                        🎓 Tech Stack & CGPA
+                    </button>
+                </div>
 
-                    <!-- Certificate 1 -->
-                    <div class="education-box">
-                        <div class="edu-img">
-                            <i class="fa-solid fa-user-secret" style="font-size: 3.5rem; color: var(--main-color);"></i>
-                        </div>
-                        <div class="edu-content">
-                            <h3>Python & Ethical Hacking From Scratch</h3>
-                            <p class="course">Udemy (Zaid Sabih)</p>
-                            <p class="grade">Issued: July 17, 2025</p>
-                            <a href="https://www.udemy.com/certificate/UC-1ea6e132-e54a-4ba6-a70e-c68af22fb2ee/"
-                                target="_blank"
-                                style="color:var(--main-color); font-size:1.4rem; margin-top:0.5rem; display:inline-block;"><i
-                                    class="fa-solid fa-link"></i> View Credential</a>
-                        </div>
+                <!-- Terminal Input Form -->
+                <form class="terminal-input-bar" id="terminal-form">
+                    <span class="prompt-symbol">&gt;&gt;</span>
+                    <input type="text" id="terminal-input" placeholder="Ask a question about Harsh's AI projects or experience..." autocomplete="off">
+                    <button type="submit" class="terminal-send-btn" id="terminal-send">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section class="skills section" id="skills">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Competencies</span>
+            <h2 class="section-title">Technical <span>Skill Matrix</span></h2>
+            <p class="section-subtitle">Categorized breakdown of AI, machine learning, backend, and data engineering tools.</p>
+        </div>
+
+        <div class="skills-matrix-grid">
+            <!-- Category 1: AI, GenAI & NLP -->
+            <div class="skill-category-card">
+                <div class="cat-header">
+                    <div class="cat-icon genai-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div>
+                        <h3>GenAI, LLMs & NLP</h3>
+                        <span class="cat-count">Core Specialization</span>
                     </div>
+                </div>
+                <div class="skill-badges">
+                    <div class="badge-item"><i class="fa-solid fa-network-wired"></i> RAG Architectures</div>
+                    <div class="badge-item"><i class="fa-solid fa-terminal"></i> Prompt Engineering</div>
+                    <div class="badge-item"><i class="fa-solid fa-robot"></i> Ollama & Local LLMs</div>
+                    <div class="badge-item"><i class="fa-solid fa-magnifying-glass"></i> FAISS Vector DB</div>
+                    <div class="badge-item"><i class="fa-solid fa-language"></i> NLP & Text-to-SQL</div>
+                    <div class="badge-item"><i class="fa-solid fa-file-code"></i> Document Chunking</div>
+                    <div class="badge-item"><i class="fa-solid fa-comments"></i> Conversational Chatbots</div>
+                </div>
+            </div>
 
-                    <!-- Certificate 2 -->
-                    <div class="education-box">
-                        <div class="edu-img">
-                            <i class="fa-solid fa-brain" style="font-size: 3.5rem; color: var(--main-color);"></i>
-                        </div>
-                        <div class="edu-content">
-                            <h3>Machine Learning for Data Science</h3>
-                            <p class="course">IBM Skills Build</p>
-                            <p class="grade">Issued: Feb 20, 2025</p>
-                            <a href="https://www.credly.com/badges/aa75f805-2302-499c-8360-0c8fdc992632" target="_blank"
-                                style="color:var(--main-color); font-size:1.4rem; margin-top:0.5rem; display:inline-block;"><i
-                                    class="fa-solid fa-link"></i> View Credential</a>
-                        </div>
+            <!-- Category 2: Computer Vision & Deep Learning -->
+            <div class="skill-category-card">
+                <div class="cat-header">
+                    <div class="cat-icon cv-icon"><i class="fa-solid fa-eye"></i></div>
+                    <div>
+                        <h3>Vision & Deep Learning</h3>
+                        <span class="cat-count">Models & Frameworks</span>
                     </div>
+                </div>
+                <div class="skill-badges">
+                    <div class="badge-item"><i class="fa-solid fa-cube"></i> Deep Learning</div>
+                    <div class="badge-item"><i class="fa-solid fa-crosshairs"></i> YOLOv8</div>
+                    <div class="badge-item"><i class="fa-solid fa-camera"></i> OpenCV</div>
+                    <div class="badge-item"><i class="fa-solid fa-cubes"></i> VGG16 & CNNs</div>
+                    <div class="badge-item"><i class="fa-solid fa-arrow-right-arrow-left"></i> CNN-LSTM</div>
+                    <div class="badge-item"><i class="fa-solid fa-file-lines"></i> OCR Integration</div>
+                    <div class="badge-item"><i class="fa-solid fa-chart-pie"></i> scikit-learn</div>
+                </div>
+            </div>
 
-                    <!-- Certificate 3 -->
-                    <div class="education-box">
-                        <div class="edu-img">
-                            <i class="fa-solid fa-cloud" style="font-size: 3.5rem; color: var(--main-color);"></i>
+            <!-- Category 3: Backend & APIs -->
+            <div class="skill-category-card">
+                <div class="cat-header">
+                    <div class="cat-icon backend-icon"><i class="fa-brands fa-python"></i></div>
+                    <div>
+                        <h3>Backend & Systems</h3>
+                        <span class="cat-count">Fast & Scalable</span>
+                    </div>
+                </div>
+                <div class="skill-badges">
+                    <div class="badge-item"><i class="fa-brands fa-python"></i> Python (Expert)</div>
+                    <div class="badge-item"><i class="fa-solid fa-bolt"></i> FastAPI</div>
+                    <div class="badge-item"><i class="fa-solid fa-flask"></i> Flask</div>
+                    <div class="badge-item"><i class="fa-solid fa-feather"></i> Django</div>
+                    <div class="badge-item"><i class="fa-solid fa-gears"></i> RESTful APIs</div>
+                    <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> Error Handling & Validation</div>
+                </div>
+            </div>
+
+            <!-- Category 4: Data Engineering & DBs -->
+            <div class="skill-category-card">
+                <div class="cat-header">
+                    <div class="cat-icon data-icon"><i class="fa-solid fa-database"></i></div>
+                    <div>
+                        <h3>Data & Databases</h3>
+                        <span class="cat-count">ETL & Storage</span>
+                    </div>
+                </div>
+                <div class="skill-badges">
+                    <div class="badge-item"><i class="fa-solid fa-server"></i> SQL Server</div>
+                    <div class="badge-item"><i class="fa-solid fa-database"></i> MySQL</div>
+                    <div class="badge-item"><i class="fa-solid fa-table"></i> SQLite</div>
+                    <div class="badge-item"><i class="fa-solid fa-calculator"></i> NumPy</div>
+                    <div class="badge-item"><i class="fa-solid fa-table-cells"></i> Pandas</div>
+                    <div class="badge-item"><i class="fa-solid fa-file-binary"></i> BLOB Processing</div>
+                </div>
+            </div>
+
+            <!-- Category 5: Tools, DevOps & Platforms -->
+            <div class="skill-category-card full-span">
+                <div class="cat-header">
+                    <div class="cat-icon tools-icon"><i class="fa-solid fa-toolbox"></i></div>
+                    <div>
+                        <h3>Tools, DevOps & Collaboration</h3>
+                        <span class="cat-count">Workflow & Production</span>
+                    </div>
+                </div>
+                <div class="skill-badges">
+                    <div class="badge-item"><i class="fa-brands fa-git-alt"></i> Git</div>
+                    <div class="badge-item"><i class="fa-brands fa-github"></i> GitHub</div>
+                    <div class="badge-item"><i class="fa-brands fa-docker"></i> Docker</div>
+                    <div class="badge-item"><i class="fa-solid fa-book-open"></i> Jupyter Notebook</div>
+                    <div class="badge-item"><i class="fa-solid fa-chart-simple"></i> Streamlit</div>
+                    <div class="badge-item"><i class="fa-brands fa-linux"></i> Linux</div>
+                    <div class="badge-item"><i class="fa-solid fa-users"></i> Team Collaboration</div>
+                    <div class="badge-item"><i class="fa-solid fa-clipboard-check"></i> SDLC & Documentation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Credentials Timeline -->
+    <section class="education section" id="education">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Background</span>
+            <h2 class="section-title">Education & <span>Certifications</span></h2>
+            <p class="section-subtitle">Academic foundations and verified professional industry credentials.</p>
+        </div>
+
+        <div class="edu-cert-container">
+            <!-- Academic Column -->
+            <div class="timeline-column">
+                <h3 class="column-title"><i class="fa-solid fa-building-columns"></i> Academic Qualifications</h3>
+
+                <div class="timeline-card">
+                    <div class="tl-logo">
+                        <img src="ggv_logo.png" alt="GGV Bilaspur Logo">
+                    </div>
+                    <div class="tl-content">
+                        <span class="tl-duration">2024 – 2026</span>
+                        <h4>Master of Computer Applications (MCA)</h4>
+                        <p class="tl-inst">Guru Ghasidas Vishwavidyalaya (Central University), Bilaspur, C.G</p>
+                        <div class="tl-grade-badge">
+                            <i class="fa-solid fa-medal"></i> CGPA: <strong>8.00 / 10</strong>
                         </div>
-                        <div class="edu-content">
-                            <h3>Data Transformation with Google Cloud</h3>
-                            <p class="course">Google Cloud Training</p>
-                            <p class="grade">Issued: Oct 3, 2024</p>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/GA5HY9AX2YGU"
-                                target="_blank"
-                                style="color:var(--main-color); font-size:1.4rem; margin-top:0.5rem; display:inline-block;"><i
-                                    class="fa-solid fa-link"></i> View Credential</a>
+                        <p class="tl-notes">Advanced coursework in Machine Learning, Deep Learning, NLP, Distributed Systems, and Advanced Algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="tl-logo">
+                        <img src="ggv_logo.png" alt="GGV Bilaspur Logo">
+                    </div>
+                    <div class="tl-content">
+                        <span class="tl-duration">2021 – 2024</span>
+                        <h4>Bachelor of Computer Science (Hons)</h4>
+                        <p class="tl-inst">Guru Ghasidas Vishwavidyalaya, Bilaspur, C.G</p>
+                        <div class="tl-grade-badge">
+                            <i class="fa-solid fa-award"></i> CGPA: <strong>7.78 / 10</strong>
                         </div>
+                        <p class="tl-notes">Foundations in Python, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Design.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Connect Section (Replaces Contact Form) -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Connect <span>With Me</span></h2>
+            <!-- Certifications Column -->
+            <div class="timeline-column">
+                <h3 class="column-title"><i class="fa-solid fa-certificate"></i> Verified Certifications</h3>
 
-            <div class="social-connect-container">
-                <a href="https://linkedin.com/in/harshmishra95" target="_blank" class="social-card linkedin">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Let's Connect</p>
+                <!-- Cert 1: IBM -->
+                <div class="timeline-card cert-card">
+                    <div class="tl-cert-icon ibm"><i class="fa-solid fa-brain"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-duration">Issued: Feb 20, 2025</span>
+                        <h4>Machine Learning for Data Science Projects</h4>
+                        <p class="tl-inst">IBM SkillsBuild</p>
+                        <p class="tl-notes">Hands-on model training, feature selection, evaluation metrics, and supervised/unsupervised ML implementations.</p>
+                        <a href="https://www.credly.com/badges/aa75f805-2302-499c-8360-0c8fdc992632" target="_blank" class="cert-verify-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Credly
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Udemy Python & Hacking -->
+                <div class="timeline-card cert-card">
+                    <div class="tl-cert-icon udemy"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-duration">Issued: July 17, 2025</span>
+                        <h4>Learn Python & Ethical Hacking From Scratch</h4>
+                        <p class="tl-inst">Udemy (Zaid Sabih)</p>
+                        <p class="tl-notes">Network programming, automated packet analysis, security auditing, and Python vulnerability scripting.</p>
+                        <a href="https://www.udemy.com/certificate/UC-1ea6e132-e54a-4ba6-a70e-c68af22fb2ee/" target="_blank" class="cert-verify-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Udemy
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Google Cloud -->
+                <div class="timeline-card cert-card">
+                    <div class="tl-cert-icon gcp"><i class="fa-brands fa-google"></i></div>
+                    <div class="tl-content">
+                        <span class="tl-duration">Issued: Oct 3, 2024</span>
+                        <h4>Exploring Data Transformation with Google Cloud</h4>
+                        <p class="tl-inst">Google Cloud Training (Coursera)</p>
+                        <p class="tl-notes">Cloud data engineering, pipeline design, BigQuery analytics, and automated cloud transformations.</p>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/GA5HY9AX2YGU" target="_blank" class="cert-verify-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Coursera
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog & Engineering Insights Section -->
+    <section class="blogs section" id="blogs">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-pen-nib"></i> Writing</span>
+            <h2 class="section-title">Engineering <span>Insights & Blog</span></h2>
+            <p class="section-subtitle">Articles on AI architectures, machine learning tutorials, and technology thoughts.</p>
+        </div>
+
+        <div class="blog-container" id="blog-posts">
+            <!-- Dynamic blog cards loaded via RSS -->
+            <div class="loading-spinner">
+                <i class="fa-solid fa-circle-notch fa-spin"></i>
+                <p>Loading latest engineering articles...</p>
+            </div>
+        </div>
+
+        <div class="blog-cta">
+            <a href="https://computervigyanofficial.blogspot.com/" target="_blank" class="btn btn-outline">
+                <span>View All Articles on Computer Vigyan</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="contact section" id="contact">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get in Touch</span>
+            <h2 class="section-title">Let's Build <span>Something Intelligent</span></h2>
+            <p class="section-subtitle">Interested in collaborating on an AI project or hiring for AI/ML engineering roles? Let's talk.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Contact Channels Grid -->
+            <div class="contact-channels">
+                <a href="mailto:mharsh181@gmail.com" class="contact-channel-card">
+                    <div class="channel-icon email-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-label">Email Direct</span>
+                        <h4>mharsh181@gmail.com</h4>
+                        <span class="channel-action">Click to send email &rarr;</span>
+                    </div>
                 </a>
 
-                <a href="https://github.com/mharsh181" target="_blank" class="social-card github">
-                    <i class="fa-brands fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>Check my Code</p>
+                <a href="https://linkedin.com/in/harshmishra95" target="_blank" class="contact-channel-card">
+                    <div class="channel-icon linkedin-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-label">LinkedIn</span>
+                        <h4>in/harshmishra95</h4>
+                        <span class="channel-action">Connect professionally &rarr;</span>
+                    </div>
                 </a>
 
-                <a href="https://instagram.com/harshmishra95" target="_blank" class="social-card instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <p>Follow Me</p>
+                <a href="https://github.com/mharsh181" target="_blank" class="contact-channel-card">
+                    <div class="channel-icon github-icon"><i class="fa-brands fa-github"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-label">GitHub</span>
+                        <h4>github.com/mharsh181</h4>
+                        <span class="channel-action">Explore code repositories &rarr;</span>
+                    </div>
                 </a>
 
-                <a href="mailto:mharsh181@gmail.com" class="social-card email">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>Say Hello</p>
+                <a href="tel:+916266384539" class="contact-channel-card">
+                    <div class="channel-icon phone-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="channel-info">
+                        <span class="channel-label">Direct Phone</span>
+                        <h4>+91-6266384539</h4>
+                        <span class="channel-action">Call or WhatsApp &rarr;</span>
+                    </div>
                 </a>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Copyright &copy; 2024 by Harsh Mishra | All Rights Reserved.</p>
+            <!-- Quick Inquiry Box -->
+            <div class="contact-form-box">
+                <div class="form-header">
+                    <h3><i class="fa-solid fa-bolt"></i> Send a Quick Dispatch</h3>
+                    <p>Have a role or project? Pre-fill this message and open directly in your mail client.</p>
+                </div>
+                <form id="quick-contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Topic / Role</label>
+                            <input type="text" id="contact-subject" placeholder="e.g. AI/ML Engineer Role" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="4" placeholder="Describe the project, role, or opportunity..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Launch Mail Client</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="#home" class="footer-logo">Harsh Mishra<span class="accent-dot">.ai</span></a>
+                <p>AI/ML Engineer · GenAI & RAG Architect · Python & FastAPI</p>
             </div>
 
-            <div class="footer-iconTop">
-                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="Harsh_Mishra_resume-8sept.pdf" target="_blank">Resume PDF</a>
             </div>
-        </footer>
 
-        <!-- Typer JS for typing effect -->
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <!-- Scroll Reveal -->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Harsh Mishra. Built with modern web architecture & AI aesthetics.</p>
+                <a href="#home" class="back-to-top" aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Main Script -->
-        <script src="script.js"></script>
+    <!-- External Libraries: Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Core Portfolio Logic -->
+    <script src="script.js"></script>
 </body>
 
 </html>
