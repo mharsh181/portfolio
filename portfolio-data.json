@@ -1,0 +1,384 @@
+{
+  "profile": {
+    "name": "Harsh Mishra",
+    "status": "Open to AI/ML Roles",
+    "typingStrings": [
+      "AI / ML Engineering",
+      "Generative AI & RAG Architectures",
+      "Autonomous LLM Agents",
+      "Computer Vision & Deep Learning",
+      "Scalable FastAPI Backends"
+    ],
+    "heroDesc": "Results-driven AI/ML Engineer with hands-on expertise architecting autonomous LLM agents, enterprise RAG pipelines, and computer vision systems. Ex-Tech Intern at CGPDTM (Ministry of Commerce & Industry) developing production conversational AI and Text-to-SQL engines.",
+    "location": "Bilaspur / Delhi, India",
+    "degree": "MCA (CGPA: 8.00 / 10)",
+    "undergrad": "B.Sc Computer Science Hons (7.78)",
+    "primaryStack": "Python, FastAPI, PyTorch, scikit-learn",
+    "aiFocus": "GenAI, RAG, NLP, Computer Vision",
+    "availability": "Available Immediately",
+    "philosophy": "I build AI systems designed for the real world — focusing not just on model benchmarks, but on latency, hallucination mitigation, secure context retrieval, and robust API integration. With deep hands-on experience in Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Vector Databases (FAISS), and Computer Vision (YOLOv8 & CNNs), I engineer end-to-end architectures that transform complex multi-modal data into actionable business intelligence."
+  },
+  "metrics": [
+    {
+      "val": "CGPDTM",
+      "lbl": "Tech Intern (AI/ML)"
+    },
+    {
+      "val": "8.00",
+      "lbl": "MCA CGPA (GGV)"
+    },
+    {
+      "val": "100k+",
+      "lbl": "Data Records Modeled"
+    },
+    {
+      "val": "3+",
+      "lbl": "Flagship AI Systems"
+    }
+  ],
+  "socials": {
+    "github": "https://github.com/mharsh181",
+    "linkedin": "https://linkedin.com/in/harshmishra95",
+    "email": "mharsh181@gmail.com",
+    "phone": "+91-6266384539",
+    "blog": "https://computervigyanofficial.blogspot.com/"
+  },
+  "resume": {
+    "pdf": "Harsh_Mishra_resume-8sept.pdf",
+    "html": "harsh_mishra_resume.html"
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Tech Intern — AI/ML Development & Backend",
+      "company": "CGPDTM (Controller General of Patents, Designs and Trade Marks), Delhi",
+      "badge": "Government of India · Ministry of Commerce & Industry",
+      "period": "Apr 2026 – Sep 2026",
+      "location": "Delhi, India",
+      "summary": "Spearheaded Generative AI solutions and autonomous database query systems for national intellectual property operations, architecting conversational assistants, RAG pipelines, and automated high-throughput data extraction services.",
+      "deliverables": [
+        {
+          "title": "Generative AI & IP Saarthi 2.0",
+          "desc": "Architected IP Saarthi 2.0, an NLP-powered conversational chatbot built using Python, LLMs, and advanced prompt engineering to automate and streamline complex intellectual property inquiries for citizens.",
+          "tag": "Python · LLMs · Prompt Engineering · NLP"
+        },
+        {
+          "title": "Autonomous RAG-Powered Text-to-SQL Agent",
+          "desc": "Engineered an autonomous Text-to-SQL AI Agent on SQL Server Database, automating dynamic schema retrieval, SQL query generation, automated guardrails, tabular reporting, and chart-based data visualizations.",
+          "tag": "SQL Server · RAG · Autonomous Agents · Data Viz"
+        },
+        {
+          "title": "Legal Document Intelligence & OCR Pipeline",
+          "desc": "Engineered an end-to-end RAG pipeline scraping IP legal documents, integrating OCR, and fine-tuning document chunking and parsing strategies to enhance context retrieval accuracy.",
+          "tag": "OCR · Document Chunking · Vector Search · RAG"
+        },
+        {
+          "title": "Workflow & Performance Optimization",
+          "desc": "Optimized LLM prompt workflows, query validation, and error handling mechanisms to minimize token overhead, eliminate hallucinations, and improve generation accuracy and response latency.",
+          "tag": "Latency Optimization · Hallucination Defense · Evaluation"
+        },
+        {
+          "title": "High-Volume Database Pipeline Automation",
+          "desc": "Engineered automated Python and SQL scripts for high-volume Trademark BLOB file extraction, binary decoding, and enterprise data preprocessing pipelines.",
+          "tag": "BLOB Processing · Python ETL · SQL Server · Batch Pipelines"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Multi-Agent SQL AI System",
+      "category": "genai",
+      "badge": "Flagship GenAI",
+      "date": "Jan 2026 – Mar 2026",
+      "headline": "Multilingual, Schema-Aware Natural Language to SQL Generation Platform",
+      "desc": "Developed a multilingual, RAG-powered Natural Language to SQL system using FastAPI and Ollama (Local LLMs) for secure, schema-aware query generation, validation, and automated execution.",
+      "archFlow": [
+        "NL Prompt",
+        "FAISS Schema RAG",
+        "Ollama LLM",
+        "SQL Guardrail",
+        "Visual Output"
+      ],
+      "features": [
+        "Multilingual RAG: Handles diverse language input with vector embeddings in FAISS.",
+        "Safe Execution: Automated schema retrieval and strict query sanitization preventing destructive operations.",
+        "Local Privacy: Runs entirely on Ollama local models with zero data leakage."
+      ],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Ollama",
+        "FAISS",
+        "SQLite",
+        "RAG"
+      ],
+      "repoUrl": "https://github.com/mharsh181",
+      "askPrompt": "Explain the Multi-Agent Text-to-SQL architecture."
+    },
+    {
+      "id": "proj-2",
+      "title": "Image Captioning with Object Detection",
+      "category": "cv",
+      "badge": "Deep Learning & Vision",
+      "date": "Aug 2025 – Dec 2025",
+      "headline": "Encoder-Decoder Vision Model integrating YOLOv8 and VGG16",
+      "desc": "Designed a dual-encoder image captioning architecture integrating YOLOv8 object tags into a CNN–LSTM sequence decoder, yielding a ~40% improvement in semantic context precision over baseline models.",
+      "archFlow": [
+        "Image Input",
+        "VGG16 + YOLOv8",
+        "LSTM Decoder",
+        "Beam Search",
+        "Rich Caption"
+      ],
+      "features": [
+        "Context Injection: YOLOv8 object tags injected into the caption decoder for rich vocabulary.",
+        "Beam Search Decoding: Coherent n-best hypothesis generation over Flickr8k dataset.",
+        "CustomTkinter GUI: Intuitive desktop interface for real-time inference and caption overlay."
+      ],
+      "tags": [
+        "Python",
+        "Deep Learning",
+        "Computer Vision",
+        "YOLOv8",
+        "VGG16",
+        "CNN-LSTM"
+      ],
+      "repoUrl": "https://github.com/mharsh181",
+      "askPrompt": "How does the YOLOv8 + VGG16 Image Captioning system work?"
+    },
+    {
+      "id": "proj-3",
+      "title": "Weather Prediction ML Engine",
+      "category": "ml",
+      "badge": "Machine Learning & Analytics",
+      "date": "Jun 2025 – Jul 2025",
+      "headline": "Streamlit-Powered Climate Metric Regression on 100,000+ Records",
+      "desc": "Engineered and deployed an interactive machine learning regression pipeline trained on 100,000+ historical climate records to predict multiple meteorological parameters with robust hyperparameter tuning.",
+      "archFlow": [
+        "100k+ Records",
+        "Feature Engineering",
+        "scikit-learn Regressors",
+        "Streamlit UI"
+      ],
+      "features": [
+        "Big Data Preprocessing: Handled missing values, outliers, and cyclical time features across 100k records.",
+        "Model Benchmarking: Evaluated Multiple Regression, Random Forest, and Gradient Boosting.",
+        "Streamlit Deployment: Interactive sliders, parameter adjustments, and live data charts."
+      ],
+      "tags": [
+        "Python",
+        "Machine Learning",
+        "scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Streamlit"
+      ],
+      "repoUrl": "https://github.com/mharsh181",
+      "askPrompt": "Explain the Weather Prediction regression pipeline."
+    }
+  ],
+  "aiSimulator": [
+    {
+      "id": "ai-1",
+      "prompt": "🏛️ CGPDTM Experience",
+      "keywords": [
+        "cgpdtm",
+        "intern",
+        "experience",
+        "patent",
+        "ministry",
+        "saarthi"
+      ],
+      "response": "<strong>CGPDTM Tech Internship Highlights (Apr 2026 – Sep 2026):</strong><br>• <strong>IP Saarthi 2.0:</strong> Architected a high-accuracy conversational GenAI assistant using Python, LLMs, and prompt engineering to guide users through Indian Patent, Trademark, and Design queries.<br>• <strong>Autonomous Text-to-SQL:</strong> Engineered an autonomous agent on SQL Server automating schema discovery, query validation, and generating real-time tabular and chart visualizations.<br>• <strong>Document Intelligence & OCR:</strong> Built an end-to-end legal document RAG pipeline with custom OCR, semantic chunking, and FAISS vector retrieval.<br>• <strong>BLOB Automation:</strong> Automated high-volume Trademark binary BLOB data pipelines for seamless preprocessing."
+    },
+    {
+      "id": "ai-2",
+      "prompt": "⚡ Text-to-SQL Architecture",
+      "keywords": [
+        "sql",
+        "multi-agent",
+        "text-to-sql",
+        "query",
+        "ollama",
+        "fastapi"
+      ],
+      "response": "<strong>Multi-Agent SQL AI System Architecture:</strong><br>• <strong>Vector Schema Retrieval:</strong> Database schemas & sample queries are embedded and indexed into FAISS.<br>• <strong>RAG & Ollama Inference:</strong> User input (multilingual) is retrieved with the schema context and synthesized into SQL via local Ollama models (privacy-first).<br>• <strong>Guardrail & Execution:</strong> Queries pass through an AST-level syntax sanitizer to prevent destructive commands (DROP/DELETE) before safe execution on SQLite/Postgres.<br>• <strong>Output:</strong> Generates both raw tabular datasets and automated dynamic charts."
+    },
+    {
+      "id": "ai-3",
+      "prompt": "👁️ YOLOv8 + VGG16 Pipeline",
+      "keywords": [
+        "caption",
+        "image",
+        "vision",
+        "yolo",
+        "vgg16",
+        "cv",
+        "object"
+      ],
+      "response": "<strong>Image Captioning with Object Detection (YOLOv8 + VGG16):</strong><br>• <strong>Dual Feature Extraction:</strong> Combines spatial image embeddings from VGG16 with contextual semantic object labels predicted in real-time by YOLOv8.<br>• <strong>Tag Injection:</strong> Detected object tags are appended to context tokens, yielding a <strong>~40% precision improvement</strong> in generating accurate descriptive captions.<br>• <strong>CNN-LSTM & Beam Search:</strong> Decodes coherent sentences using n-best hypothesis beam search over the Flickr8k benchmark.<br>• <strong>CustomTkinter GUI:</strong> Integrated a clean desktop app for instant image drag-and-drop and caption generation."
+    },
+    {
+      "id": "ai-4",
+      "prompt": "🎓 Tech Stack & CGPA",
+      "keywords": [
+        "skills",
+        "stack",
+        "education",
+        "cgpa",
+        "degree",
+        "python"
+      ],
+      "response": "<strong>Harsh Mishra's Technical Profile & Education:</strong><br>• <strong>Education:</strong> MCA (2024–2026) at Guru Ghasidas Vishwavidyalaya (CGPA: <strong>8.00 / 10</strong>).<br>• <strong>Undergrad:</strong> B.Sc Computer Science Hons (CGPA: <strong>7.78 / 10</strong>).<br>• <strong>AI & ML:</strong> LLMs, RAG, FAISS, Prompt Engineering, PyTorch, scikit-learn, OpenCV, YOLOv8.<br>• <strong>Backend & Data:</strong> Python, FastAPI, Flask, Django, SQL Server, MySQL, SQLite, Pandas, NumPy.<br>• <strong>DevOps & Tools:</strong> Docker, Git, Linux, Jupyter, Streamlit.<br>• <strong>Certifications:</strong> IBM SkillsBuild (ML), Udemy (Python & Security), Google Cloud Training."
+    },
+    {
+      "id": "ai-5",
+      "prompt": "📬 Contact & Hiring",
+      "keywords": [
+        "contact",
+        "email",
+        "hire",
+        "phone",
+        "linkedin",
+        "github"
+      ],
+      "response": "<strong>Get in Touch with Harsh:</strong><br>• <strong>Email:</strong> <a href=\"mailto:mharsh181@gmail.com\" style=\"color:var(--accent-cyan);\">mharsh181@gmail.com</a><br>• <strong>Phone:</strong> +91-6266384539<br>• <strong>LinkedIn:</strong> <a href=\"https://linkedin.com/in/harshmishra95\" target=\"_blank\" style=\"color:var(--accent-cyan);\">linkedin.com/in/harshmishra95</a><br>• <strong>GitHub:</strong> <a href=\"https://github.com/mharsh181\" target=\"_blank\" style=\"color:var(--accent-cyan);\">github.com/mharsh181</a><br>• <strong>Status:</strong> Actively interviewing for AI/ML Engineer, GenAI, and Python Backend roles!"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "title": "GenAI, LLMs & NLP",
+      "icon": "fa-brain",
+      "iconClass": "genai-icon",
+      "subtitle": "Core Specialization",
+      "badges": [
+        "RAG Architectures",
+        "Prompt Engineering",
+        "Ollama & Local LLMs",
+        "FAISS Vector DB",
+        "NLP & Text-to-SQL",
+        "Document Chunking",
+        "Conversational Chatbots"
+      ]
+    },
+    {
+      "id": "skill-2",
+      "title": "Vision & Deep Learning",
+      "icon": "fa-eye",
+      "iconClass": "cv-icon",
+      "subtitle": "Models & Frameworks",
+      "badges": [
+        "Deep Learning",
+        "YOLOv8",
+        "OpenCV",
+        "VGG16 & CNNs",
+        "CNN-LSTM",
+        "OCR Integration",
+        "scikit-learn"
+      ]
+    },
+    {
+      "id": "skill-3",
+      "title": "Backend & Systems",
+      "icon": "fa-python",
+      "iconClass": "backend-icon",
+      "subtitle": "Fast & Scalable",
+      "badges": [
+        "Python (Expert)",
+        "FastAPI",
+        "Flask",
+        "Django",
+        "RESTful APIs",
+        "Error Handling & Validation"
+      ]
+    },
+    {
+      "id": "skill-4",
+      "title": "Data & Databases",
+      "icon": "fa-database",
+      "iconClass": "data-icon",
+      "subtitle": "ETL & Storage",
+      "badges": [
+        "SQL Server",
+        "MySQL",
+        "SQLite",
+        "NumPy",
+        "Pandas",
+        "BLOB Processing"
+      ]
+    },
+    {
+      "id": "skill-5",
+      "title": "Tools, DevOps & Collaboration",
+      "icon": "fa-toolbox",
+      "iconClass": "tools-icon",
+      "subtitle": "Workflow & Production",
+      "badges": [
+        "Git",
+        "GitHub",
+        "Docker",
+        "Jupyter Notebook",
+        "Streamlit",
+        "Linux",
+        "Team Collaboration",
+        "SDLC & Documentation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "duration": "2024 – 2026",
+      "degree": "Master of Computer Applications (MCA)",
+      "institution": "Guru Ghasidas Vishwavidyalaya (Central University), Bilaspur, C.G",
+      "cgpa": "8.00 / 10",
+      "notes": "Advanced coursework in Machine Learning, Deep Learning, NLP, Distributed Systems, and Advanced Algorithms."
+    },
+    {
+      "id": "edu-2",
+      "duration": "2021 – 2024",
+      "degree": "Bachelor of Computer Science (Hons)",
+      "institution": "Guru Ghasidas Vishwavidyalaya, Bilaspur, C.G",
+      "cgpa": "7.78 / 10",
+      "notes": "Foundations in Python, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Design."
+    }
+  ],
+  "certificates": [
+    {
+      "id": "cert-1",
+      "duration": "Issued: Feb 20, 2025",
+      "title": "Machine Learning for Data Science Projects",
+      "issuer": "IBM SkillsBuild",
+      "notes": "Hands-on model training, feature selection, evaluation metrics, and supervised/unsupervised ML implementations.",
+      "verifyUrl": "https://www.credly.com/badges/aa75f805-2302-499c-8360-0c8fdc992632",
+      "platform": "Credly",
+      "icon": "fa-brain",
+      "type": "ibm"
+    },
+    {
+      "id": "cert-2",
+      "duration": "Issued: July 17, 2025",
+      "title": "Learn Python & Ethical Hacking From Scratch",
+      "issuer": "Udemy (Zaid Sabih)",
+      "notes": "Network programming, automated packet analysis, security auditing, and Python vulnerability scripting.",
+      "verifyUrl": "https://www.udemy.com/certificate/UC-1ea6e132-e54a-4ba6-a70e-c68af22fb2ee/",
+      "platform": "Udemy",
+      "icon": "fa-shield-halved",
+      "type": "udemy"
+    },
+    {
+      "id": "cert-3",
+      "duration": "Issued: Oct 3, 2024",
+      "title": "Exploring Data Transformation with Google Cloud",
+      "issuer": "Google Cloud Training (Coursera)",
+      "notes": "Cloud data engineering, pipeline design, BigQuery analytics, and automated cloud transformations.",
+      "verifyUrl": "https://www.coursera.org/account/accomplishments/certificate/GA5HY9AX2YGU",
+      "platform": "Coursera",
+      "icon": "fa-google",
+      "type": "gcp"
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Mishra | Portfolio Admin Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="admin-body">
+    <!-- Passcode Authentication Modal -->
+    <div class="auth-overlay" id="auth-overlay">
+        <div class="auth-card">
+            <div class="auth-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h2>Admin Console Access</h2>
+            <p>Enter the security passcode to manage the portfolio content.</p>
+            <form id="auth-form">
+                <div class="auth-input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="auth-passcode" placeholder="Enter passcode (default: admin123)" autocomplete="current-password" autofocus required>
+                </div>
+                <div id="auth-error" class="auth-error"></div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Unlock Console
+                </button>
+            </form>
+            <div class="auth-hint">
+                <span>Default Passcode: <code>admin123</code></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Admin Layout -->
+    <div class="admin-layout" id="admin-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" target="_blank" class="sidebar-logo">
+                    <span class="logo-symbol">&lt;/&gt;</span>
+                    <span class="logo-text">harsh<span class="accent-dot">.admin</span></span>
+                </a>
+                <span class="sidebar-version">v2.4 Pro</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">General</div>
+                <button class="nav-tab active" data-tab="tab-dashboard">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-profile">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span>Profile & Hero</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-metrics">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Key Metrics</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-socials">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Links & Socials</span>
+                </button>
+
+                <div class="nav-section-label">Experience & Projects</div>
+                <button class="nav-tab" data-tab="tab-experience">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Work History</span>
+                    <span class="tab-badge" id="count-exp">1</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-projects">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>Flagship Projects</span>
+                    <span class="tab-badge" id="count-proj">3</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-ai-terminal">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>AI Simulator Q&A</span>
+                    <span class="tab-badge" id="count-ai">5</span>
+                </button>
+
+                <div class="nav-section-label">Capabilities & Academics</div>
+                <button class="nav-tab" data-tab="tab-skills">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Skills Matrix</span>
+                </button>
+                <button class="nav-tab" data-tab="tab-education">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Education & Certs</span>
+                </button>
+
+                <div class="nav-section-label">System & Storage</div>
+                <button class="nav-tab" data-tab="tab-backup">
+                    <i class="fa-solid fa-database"></i>
+                    <span>Backup & Deploy</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout" id="btn-logout">
+                    <i class="fa-solid fa-power-off"></i>
+                    <span>Lock Console</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+            <!-- Top Action Bar -->
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-btn" id="mobile-sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="server-status" id="server-status-pill">
+                        <span class="status-dot"></span>
+                        <span id="server-status-text">Checking Local Server...</span>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <a href="index.html" target="_blank" class="btn btn-outline btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Live Portfolio</span>
+                    </a>
+                    <button class="btn btn-secondary btn-sm" id="btn-quick-export">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Export JSON</span>
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="btn-save-all">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <span>Save Changes</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Scrollable Content Canvas -->
+            <div class="admin-content-canvas">
+
+                <!-- 1. DASHBOARD OVERVIEW TAB -->
+                <section class="tab-pane active" id="tab-dashboard">
+                    <div class="pane-header">
+                        <div>
+                            <h2>System Dashboard</h2>
+                            <p>Overview of active portfolio configurations and deployment status.</p>
+                        </div>
+                        <div class="quick-status-toggle">
+                            <label class="switch">
+                                <input type="checkbox" id="dash-status-toggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            <span id="dash-status-label" class="status-label">Open to AI/ML Roles</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-cards-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon cyan"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="stat-info">
+                                <h3 id="stat-proj-num">3</h3>
+                                <p>Flagship AI Projects</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon violet"><i class="fa-solid fa-briefcase"></i></div>
+                            <div class="stat-info">
+                                <h3 id="stat-exp-num">1</h3>
+                                <p>Experience Positions</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon emerald"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="stat-info">
+                                <h3 id="stat-ai-num">5</h3>
+                                <p>AI Simulator Scenarios</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon amber"><i class="fa-solid fa-award"></i></div>
+                            <div class="stat-info">
+                                <h3 id="stat-cert-num">3</h3>
+                                <p>Verified Credentials</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-grid">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3><i class="fa-solid fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="quick-actions-list">
+                                <button class="action-btn" onclick="switchTab('tab-projects')">
+                                    <i class="fa-solid fa-plus"></i> Add New Flagship Project
+                                </button>
+                                <button class="action-btn" onclick="switchTab('tab-ai-terminal')">
+                                    <i class="fa-solid fa-comment-dots"></i> Add AI Simulator Prompt & Answer
+                                </button>
+                                <button class="action-btn" onclick="switchTab('tab-experience')">
+                                    <i class="fa-solid fa-pen-to-square"></i> Update CGPDTM Tech Internship
+                                </button>
+                                <button class="action-btn" onclick="switchTab('tab-backup')">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i> Backup & Download Current JSON
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3><i class="fa-solid fa-server"></i> Persistence Mode</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="persistence-guide" id="persistence-guide-box">
+                                    <!-- Dynamic persistence status injected by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. PROFILE & HERO TAB -->
+                <section class="tab-pane" id="tab-profile">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Profile & Hero Section</h2>
+                            <p>Configure headline, personal identity, typing typewriter phrases, and summaries.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-name">Full Name</label>
+                                <input type="text" id="prof-name" class="form-control" placeholder="e.g. Harsh Mishra">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-status">Status Tag</label>
+                                <input type="text" id="prof-status" class="form-control" placeholder="e.g. Open to AI/ML Roles">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Dynamic Typewriter Phrases (Roles)</label>
+                            <div class="dynamic-list-container" id="typewriter-list">
+                                <!-- Typewriter phrases injected here -->
+                            </div>
+                            <button type="button" class="btn btn-outline btn-xs" id="btn-add-typewriter">
+                                <i class="fa-solid fa-plus"></i> Add Phrase
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prof-desc">Hero Summary Pitch</label>
+                            <textarea id="prof-desc" class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-location">Location</label>
+                                <input type="text" id="prof-location" class="form-control" placeholder="Bilaspur / Delhi, India">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-availability">Availability</label>
+                                <input type="text" id="prof-availability" class="form-control" placeholder="Available Immediately">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-degree">Postgrad Degree & Grade</label>
+                                <input type="text" id="prof-degree" class="form-control" placeholder="MCA (CGPA: 8.00 / 10)">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-undergrad">Undergrad Degree & Grade</label>
+                                <input type="text" id="prof-undergrad" class="form-control" placeholder="B.Sc Computer Science Hons (7.78)">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-stack">Primary Stack</label>
+                                <input type="text" id="prof-stack" class="form-control" placeholder="Python, FastAPI, PyTorch, scikit-learn">
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-focus">AI Specialization Focus</label>
+                                <input type="text" id="prof-focus" class="form-control" placeholder="GenAI, RAG, NLP, Computer Vision">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prof-philosophy">About / Engineering Philosophy</label>
+                            <textarea id="prof-philosophy" class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. KEY METRICS TAB -->
+                <section class="tab-pane" id="tab-metrics">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Key Metrics Strip</h2>
+                            <p>Configure the 4 high-impact highlight statistics displayed in the Hero section.</p>
+                        </div>
+                    </div>
+
+                    <div class="metrics-editor-grid" id="metrics-editor-container">
+                        <!-- 4 metrics editors injected here -->
+                    </div>
+                </section>
+
+                <!-- 4. SOCIALS & RESUME TAB -->
+                <section class="tab-pane" id="tab-socials">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Links, Socials & Resume Files</h2>
+                            <p>Manage contact endpoints, social profiles, and resume document paths.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="soc-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                                <input type="email" id="soc-email" class="form-control" placeholder="mharsh181@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="soc-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="text" id="soc-phone" class="form-control" placeholder="+91-6266384539">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="soc-linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn URL</label>
+                                <input type="url" id="soc-linkedin" class="form-control" placeholder="https://linkedin.com/in/harshmishra95">
+                            </div>
+                            <div class="form-group">
+                                <label for="soc-github"><i class="fa-brands fa-github"></i> GitHub URL</label>
+                                <input type="url" id="soc-github" class="form-control" placeholder="https://github.com/mharsh181">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="soc-blog"><i class="fa-solid fa-rss"></i> Blog Feed URL (Blogger)</label>
+                            <input type="url" id="soc-blog" class="form-control" placeholder="https://computervigyanofficial.blogspot.com/">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-pdf"><i class="fa-solid fa-file-pdf"></i> Resume PDF Path / URL</label>
+                                <input type="text" id="res-pdf" class="form-control" placeholder="Harsh_Mishra_resume-8sept.pdf">
+                            </div>
+                            <div class="form-group">
+                                <label for="res-html"><i class="fa-solid fa-code"></i> Interactive HTML Resume Path</label>
+                                <input type="text" id="res-html" class="form-control" placeholder="harsh_mishra_resume.html">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. EXPERIENCE TAB -->
+                <section class="tab-pane" id="tab-experience">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Professional Experience</h2>
+                            <p>Manage work history, ministry internships, deliverables, and tech stack tags.</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="btn-add-exp">
+                            <i class="fa-solid fa-plus"></i> Add Experience
+                        </button>
+                    </div>
+
+                    <div class="cards-stack" id="experience-list-container">
+                        <!-- Experience cards injected here -->
+                    </div>
+                </section>
+
+                <!-- 6. PROJECTS TAB -->
+                <section class="tab-pane" id="tab-projects">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Flagship AI/ML Projects</h2>
+                            <p>Manage showcased projects, architecture flow diagrams, feature bullet points, and repositories.</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="btn-add-project">
+                            <i class="fa-solid fa-plus"></i> Add Project
+                        </button>
+                    </div>
+
+                    <div class="cards-stack" id="projects-list-container">
+                        <!-- Project cards injected here -->
+                    </div>
+                </section>
+
+                <!-- 7. AI SIMULATOR TAB -->
+                <section class="tab-pane" id="tab-ai-terminal">
+                    <div class="pane-header">
+                        <div>
+                            <h2>AI Agent Simulator Knowledge Base</h2>
+                            <p>Configure questions and rich automated answers provided by the interactive terminal simulator on the portfolio.</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="btn-add-ai">
+                            <i class="fa-solid fa-plus"></i> Add Scenario
+                        </button>
+                    </div>
+
+                    <div class="cards-stack" id="ai-simulator-list-container">
+                        <!-- AI scenarios injected here -->
+                    </div>
+                </section>
+
+                <!-- 8. SKILLS MATRIX TAB -->
+                <section class="tab-pane" id="tab-skills">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Skills Matrix</h2>
+                            <p>Manage technical competence domains, categories, and technology tags.</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm" id="btn-add-skill-cat">
+                            <i class="fa-solid fa-plus"></i> Add Category
+                        </button>
+                    </div>
+
+                    <div class="cards-stack" id="skills-list-container">
+                        <!-- Skill categories injected here -->
+                    </div>
+                </section>
+
+                <!-- 9. EDUCATION & CERTIFICATIONS TAB -->
+                <section class="tab-pane" id="tab-education">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Education & Verified Credentials</h2>
+                            <p>Manage academic records, university details, CGPA, and credential badges.</p>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-outline btn-sm" id="btn-add-edu">
+                                <i class="fa-solid fa-plus"></i> Add Degree
+                            </button>
+                            <button class="btn btn-primary btn-sm" id="btn-add-cert">
+                                <i class="fa-solid fa-plus"></i> Add Certificate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="split-col-grid">
+                        <div>
+                            <h3 class="sub-col-title"><i class="fa-solid fa-building-columns"></i> Academic Qualifications</h3>
+                            <div class="cards-stack" id="education-list-container">
+                                <!-- Degrees injected here -->
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="sub-col-title"><i class="fa-solid fa-certificate"></i> Verified Industry Certifications</h3>
+                            <div class="cards-stack" id="certs-list-container">
+                                <!-- Certifications injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. BACKUP & DEPLOY TAB -->
+                <section class="tab-pane" id="tab-backup">
+                    <div class="pane-header">
+                        <div>
+                            <h2>Backup, Export & Deployment</h2>
+                            <p>Synchronize changes, download data files for GitHub Pages, or import backups.</p>
+                        </div>
+                    </div>
+
+                    <div class="backup-options-grid">
+                        <div class="backup-card">
+                            <div class="b-icon cyan"><i class="fa-solid fa-floppy-disk"></i></div>
+                            <h3>Save to Local Server Disk</h3>
+                            <p>Writes changes directly to <code>portfolio-data.json</code> in your local project folder (requires running <code>python admin_server.py</code>).</p>
+                            <button class="btn btn-primary" id="btn-save-disk">
+                                <i class="fa-solid fa-hard-drive"></i> Write to Disk
+                            </button>
+                        </div>
+
+                        <div class="backup-card">
+                            <div class="b-icon violet"><i class="fa-solid fa-download"></i></div>
+                            <h3>Download <code>portfolio-data.json</code></h3>
+                            <p>Export your full configuration as a clean JSON file. Drop it into your portfolio directory and commit to GitHub Pages.</p>
+                            <button class="btn btn-secondary" id="btn-download-json">
+                                <i class="fa-solid fa-file-arrow-down"></i> Download JSON File
+                            </button>
+                        </div>
+
+                        <div class="backup-card">
+                            <div class="b-icon emerald"><i class="fa-solid fa-file-import"></i></div>
+                            <h3>Import JSON Configuration</h3>
+                            <p>Upload a previously exported <code>portfolio-data.json</code> file to restore all content and settings.</p>
+                            <label class="btn btn-outline file-input-label">
+                                <i class="fa-solid fa-upload"></i> Select File to Import
+                                <input type="file" id="file-import-input" accept=".json" style="display:none;">
+                            </label>
+                        </div>
+
+                        <div class="backup-card danger">
+                            <div class="b-icon red"><i class="fa-solid fa-rotate-left"></i></div>
+                            <h3>Reset to 8-Sept Factory Defaults</h3>
+                            <p>Revert all customizations back to the original baseline data extracted from the 8-Sept resume.</p>
+                            <button class="btn btn-danger" id="btn-factory-reset">
+                                <i class="fa-solid fa-trash-arrow-up"></i> Reset All Data
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Core Admin Logic -->
+    <script src="admin.js"></script>
+</body>
+
+</html>
